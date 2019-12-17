@@ -1,0 +1,11 @@
+#!/bin/bash
+clear
+echo "$(tput setaf 1) Welcome to Ros "
+echo -n "$(tput setaf 4)Please enter the ros workspace name : "
+read workspace_name
+cd
+cd ros_workspaces
+mkdir -p $workspace_name/src
+cd $workspace_name
+catkin_make
+source devel/setup.bash
